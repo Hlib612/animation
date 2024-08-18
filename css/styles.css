@@ -1,0 +1,106 @@
+.box{
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    background-color: blue;
+    border: 1px solid black;
+    animation-name: change_bg_color;
+    animation-duration: 5000ms;
+    animation-timing-function: linear;
+    animation-delay: 2000ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+@keyframes change_bg_color {
+    0% {
+        background-color: chocolate;
+    }
+    50% {
+        background-color: chartreuse;
+    }
+    100% {
+        background-color: darkmagenta;
+    }
+}
+/* @keyframes change_bg_color {
+    from {
+        background-color: chocolate;
+    }
+    to {
+        background-color: darkmagenta;
+    }
+} */
+.box:hover{
+    animation-play-state: paused;
+}
+.box_circle{
+padding: 50px;
+margin-top: 100px;
+background-color: blue;
+margin-bottom: 100px;
+}
+.box_transformed{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(64, 255, 0);
+    border: 1px solid black;
+    animation-name: change_bg_color_circle;
+    animation-duration: 3500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes change_bg_color_circle {
+    0% {
+        background-color: rgb(210, 75, 30);
+        transform: rotate(0deg) translateX(0) scale(0.1);
+    }
+    50% {
+        background-color: chartreuse;
+        border-radius: 0%;
+        transform: rotate(720deg) translateX(500%) scale(1);
+    }
+    100% {
+        background-color: rgb(234, 7, 184);
+        transform: scale(0.1);
+    }
+}
+.jumping_button{
+    padding: 15px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    animation-name: jump_button;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes jump_button {
+    0% {
+    transform: translateY(0%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.26);
+    }
+    100% {
+    transform: translateY(100%);  
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.26);
+    }
+}
+.jumping_button:hover{
+    animation-play-state: paused;
+}
+.main-title {
+    animation-name: rotate-title;
+    animation-duration: 100ms;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes rotate-title {
+    0% {
+       transform: rotate(0deg) translateY(0%); 
+    }
+    100% {
+        transform: rotate(360deg) translateY(100%);
+    }
+}
